@@ -58,7 +58,7 @@ select * from staff
 inner join payment
 on payment.payment_id = payment.staff_id(
     select 
-)
+);
 
 
 
@@ -67,7 +67,7 @@ there?
 
 select rating, title
 from film
-group by rating, title
+group by rating, title;
 
 --1001
 
@@ -75,7 +75,13 @@ group by rating, title
 7.Show all customers who have made a single payment
 above $6.99 (Use Subqueries)
 
+select first_name, last_name, amount
+from customer
+INNER JOIN payment
+ON customer.customer_id = payment.customer_id
+where amount > 6.99;
 
+--35
 
 8. How many free rentals did our stores give away?
 
